@@ -1,0 +1,9 @@
+// Kontrollera varför variabler krashar servern
+
+.btn {
+    background-color: #2f5572;
+    color: #fff;
+    text-decoration: none;
+    padding: 1.2rem;
+    display: inline-block;
+}
