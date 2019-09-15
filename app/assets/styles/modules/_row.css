@@ -1,0 +1,19 @@
+.row {
+    display: flex;
+    justify-content: space-between;
+
+    &__4 {
+        flex-basis: 33%;
+
+        @mixin atMedium {
+
+            &--margin-r-medium {
+                margin-right: 3rem;
+            }
+        }
+    }
+
+    &__8 {
+        flex-basis: 66%;
+    }
+}
