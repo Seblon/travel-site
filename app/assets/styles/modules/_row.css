@@ -1,19 +1,34 @@
 .row {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 
-    &__4 {
-        flex-basis: 33%;
-
-        @mixin atMedium {
-
-            &--margin-r-medium {
-                margin-right: 3rem;
-            }
-        }
+    &__b-margin-until-medium {
+        margin-bottom: 1.6rem
     }
 
-    &__8 {
-        flex-basis: 66%;
+    @mixin atMedium {
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__b-margin-until-medium {
+            margin-bottom: 0;
+        }
+
+        &__medium-one-third {
+            flex-basis: 33.33%;
+            margin-right: 3rem;
+        }
+
+        &__medium-one-third--larger {
+            width: 37%
+        }
+
+        &__medium-two-thirds {
+            flex-basis: 66.66%;
+        }
+
+        &__medium-two-thirds--smaller {
+            width: 63%;
+        }
     }
 }
