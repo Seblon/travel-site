@@ -681,6 +681,10 @@ a {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between
+
+        /* Oh god I'm so proud of myself right now. This code down below, says:
+        If there is a div with a class name of &__medium-half after another div with 
+        a class name of &__medium-half -> then give it a margin left. */
 }
 
         .row__b-margin-until-medium {
@@ -694,7 +698,8 @@ a {
         }
 
         .row__medium-one-third--larger {
-            width: 37%
+            -ms-flex-preferred-size: 37%;
+                flex-basis: 37%
         }
 
         .row__medium-two-thirds {
@@ -703,13 +708,23 @@ a {
         }
 
         .row__medium-two-thirds--smaller {
-            width: 63%;
+            -ms-flex-preferred-size: 63%;
+                flex-basis: 63%;
+        }
+
+        .row__medium-half {
+            -ms-flex-preferred-size: 50%;
+                flex-basis: 50%;
+        }
+        .row__medium-half + .row__medium-half {
+            margin-left: 6.25rem;
         }
     }
 
 .generic-content-container p {
+      font-weight:300;
       line-height: 1.65;
-      margin: 1.8rem 0;
+      margin: 0 0 1.8rem 0;
    }
 
 @media (min-width: 530px) {
@@ -722,4 +737,51 @@ a {
 .generic-content-container p a {
       font-weight: 700;
       text-decoration: none;
+   }
+
+.section-title {
+   font-size: 2.55rem;
+   font-weight: 300;
+   text-align: center;
+}
+
+@media (min-width: 530px) {
+
+.section-title {
+      font-size: 3.75rem
+}
+    }
+
+.section-title strong {
+      font-weight: 500;
+   }
+
+.section-title__icon {
+      display: block;
+      margin: 0 auto .6rem auto;
+   }
+
+@media (min-width: 530px) {
+
+.section-title__icon {
+         display: inline-block;
+         margin: 0 .5rem 0 0
+   }
+    }
+
+.feature-item {
+   position: relative;
+   padding-left: 94px;
+   padding-bottom: 2rem;
+}
+
+.feature-item__icon {
+      position: absolute;
+      left: 0;
+   }
+
+.feature-item__title {
+      font-size: 1.875rem;
+      font-weight: 300;
+      margin-bottom: .8rem;
    }

@@ -20,7 +20,7 @@
         }
 
         &__medium-one-third--larger {
-            width: 37%
+            flex-basis: 37%
         }
 
         &__medium-two-thirds {
@@ -28,7 +28,18 @@
         }
 
         &__medium-two-thirds--smaller {
-            width: 63%;
+            flex-basis: 63%;
+        }
+
+        &__medium-half {
+            flex-basis: 50%;
+        }
+
+        /* Oh god I'm so proud of myself right now. This code down below, says:
+        If there is a div with a class name of &__medium-half after another div with 
+        a class name of &__medium-half -> then give it a margin left. */
+        &__medium-half + &__medium-half {
+            margin-left: 6.25rem;
         }
     }
 }
