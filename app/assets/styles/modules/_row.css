@@ -15,8 +15,12 @@
         }
 
         &__medium-one-third {
+            display: flex;
             flex-basis: 33.33%;
-            margin-right: 3rem;
+        }
+
+        &__medium-one-third + &__medium-one-third {
+            margin-left: 3rem;
         }
 
         &__medium-one-third--larger {
