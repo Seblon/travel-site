@@ -560,8 +560,8 @@ a {
     }
 
 .wrapper {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 18px;
+    padding-right: 18px;
     max-width: 1236px;
     margin-left: auto;
     margin-right: auto;
@@ -571,6 +571,32 @@ a {
         padding-left: 18px;
         padding-right: 18px;
         max-width: 976px;
+    }
+
+.wrapper--no-padding-until-medium {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+@media (min-width: 800px) {
+
+.wrapper--no-padding-until-medium {
+            padding-left: 18px;
+            padding-right: 18px
+    }
+    }
+
+.wrapper--no-padding-until-large {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+@media (min-width: 1010px) {
+
+.wrapper--no-padding-until-large {
+            padding-left: 18px;
+            padding-right: 18px
+    }
     }
 
 .wrapper .wrapper {
@@ -611,7 +637,7 @@ a {
         padding-bottom: 0;
     }
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
 .page-section--testimonials {
             background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
@@ -684,16 +710,16 @@ a {
 }
 
 .row__b-margin-until-medium {
-        margin-bottom: 1.6rem
+        margin-bottom: 1.6rem;
     }
 
 @media (min-width: 800px) {
 
 .row {
-        -webkit-box-orient: horizontal;
+        -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
+            -ms-flex-direction: column;
+                flex-direction: column;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between
@@ -735,6 +761,62 @@ a {
         }
 
         .row__medium-half {
+            -ms-flex-preferred-size: 50%;
+                flex-basis: 50%;
+        }
+        .row__medium-half + .row__medium-half {
+            margin-left: 6.25rem;
+        }
+    }
+
+@media (min-width: 1010px) {
+
+.row {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between
+
+        /* Oh god I'm so proud of myself right now. This code down below, says:
+        If there is a div with a class name of &__medium-half after another div with 
+        a class name of &__medium-half -> then give it a margin left. */
+}
+
+        .row__b-margin-until-large {
+            margin-bottom: 0;
+        }
+
+        .row__large-one-third {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-preferred-size: 33.33%;
+                flex-basis: 33.33%;
+        }
+
+        .row__large-one-third + .row__large-one-third {
+            margin-left: 3rem;
+        }
+
+        .row__large-one-third--larger {
+            -ms-flex-preferred-size: 37%;
+                flex-basis: 37%
+        }
+
+        .row__large-two-thirds {
+            -ms-flex-preferred-size: 66.66%;
+                flex-basis: 66.66%;
+        }
+
+        .row__large-two-thirds--smaller {
+            -ms-flex-preferred-size: 63%;
+                flex-basis: 63%;
+        }
+
+        .row__large-half {
             -ms-flex-preferred-size: 50%;
                 flex-basis: 50%;
         }
@@ -852,7 +934,7 @@ a {
       margin-bottom: 0;
    }
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
 .testimonial {
       padding: 0 1.875rem 1px;
@@ -885,4 +967,88 @@ a {
       font-weight: 400;
       font-size: .9375rem;
       margin: .25rem 0 1rem
+   }
+
+.icon--clear-view-escapes {
+      width: 142.4;
+      height: 59.53;
+      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      background-position: 0 0;
+   }
+
+.icon--comment {
+      width: 64;
+      height: 64;
+      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      background-position: 99.70443349753694% 0;
+   }
+
+.icon--facebook {
+      width: 21.23;
+      height: 42.01;
+      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      background-position: 26.040607071652357% 45.795830448496034%;
+   }
+
+.icon--fire {
+      width: 56;
+      height: 64;
+      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      background-position: 0 99.56481481481481%;
+   }
+
+.icon--globe {
+      width: 64;
+      height: 64;
+      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      background-position: 27.586206896551722% 99.56481481481481%;
+   }
+
+.icon--instagram {
+      width: 42.01;
+      height: 42.01;
+      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      background-position: 63.2917018534157% 49.234556504346486%;
+   }
+
+.icon--mail {
+      width: 64;
+      height: 48;
+      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      background-position: 0 48.00806451612903%;
+   }
+
+.icon--rain {
+      width: 64;
+      height: 64;
+      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      background-position: 99.70443349753694% 59.25925925925926%;
+   }
+
+.icon--star {
+      width: 64;
+      height: 64;
+      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      background-position: 59.11330049261084% 99.56481481481481%;
+   }
+
+.icon--twitter {
+      width: 51.78;
+      height: 42.06;
+      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      background-position: 94.04330452560171% 98.50700323226104%;
+   }
+
+.icon--wifi {
+      width: 60;
+      height: 64;
+      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      background-position: 68.79227053140097% 0;
+   }
+
+.icon--youtube {
+      width: 34.75;
+      height: 42;
+      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      background-position: 36.69752421959096% 45.792307692307695%;
    }

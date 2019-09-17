@@ -7,7 +7,7 @@
       margin-bottom: 0;
    }
 
-   @mixin atMedium {
+   @mixin atLarge {
       padding: 0 1.875rem 1px;
       margin-bottom: 0;
    }
