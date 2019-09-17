@@ -1081,3 +1081,75 @@ Instead edit gulp/templates/sprite */
          display: inline-block
    }
     }
+
+/* In order to fully utilize grid objects, most elements have been moved to _grid.css instead. */
+
+.site-header {
+   position: absolute;
+   width: 100%;
+   z-index: 2;
+   background-color: rgba(47,85,114, .3);
+}
+
+.site-header__logo {
+      position: absolute;
+      top: 0;
+      background-color: #2f5572;
+      padding: 26px 36px;
+   }
+
+.site-header__btn-container {
+      grid-column: 3 / 4;
+      justify-self: end;
+   }
+
+@media (min-width: 800px) {
+
+.primary-nav {
+
+      grid-column: 2 / 3;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: end
+}
+
+         .primary-nav ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                    justify-content: flex-end;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            margin: 0;
+            padding: 0;
+         }
+
+         .primary-nav li {
+            list-style: none;
+            padding-right: 20px;
+         }
+
+         .primary-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 300;
+         }
+
+            .primary-nav a:hover,
+            .primary-nav a:focus {
+               color: #d59541;
+            }
+    }
+
+.grid {
+   max-width: 1236px;
+   display: grid;
+   grid-template-columns:  215px 3fr 1fr;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   margin: 0 auto;
+}

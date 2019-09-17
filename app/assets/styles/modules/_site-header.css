@@ -1,0 +1,20 @@
+/* In order to fully utilize grid objects, most elements have been moved to _grid.css instead. */
+
+.site-header {
+   position: absolute;
+   width: 100%;
+   z-index: 2;
+   background-color: rgba($mainBlue, .3);
+
+   &__logo {
+      position: absolute;
+      top: 0;
+      background-color: $mainBlue;
+      padding: 26px 36px;
+   }
+
+   &__btn-container {
+      grid-column: 3 / 4;
+      justify-self: end;
+   }
+}
