@@ -10,6 +10,12 @@
       }
    }
 
+   @mixin atMedium {
+      &--l-padding-small {
+      padding-left: 2rem;
+      }
+   }
+
    p a {
       font-weight: 700;
       text-decoration: none;

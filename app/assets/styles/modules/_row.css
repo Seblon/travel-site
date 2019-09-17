@@ -7,7 +7,7 @@
     }
 
     @mixin atMedium {
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
 
         &__b-margin-until-medium {
@@ -24,6 +24,7 @@
         }
 
         &__medium-one-third--larger {
+            display: flex;
             flex-basis: 37%
         }
 
@@ -32,6 +33,7 @@
         }
 
         &__medium-two-thirds--smaller {
+            display: flex;
             flex-basis: 63%;
         }
 
@@ -81,9 +83,9 @@
         }
 
         /* Oh god I'm so proud of myself right now. This code down below, says:
-        If there is a div with a class name of &__medium-half after another div with 
-        a class name of &__medium-half -> then give it a margin left. */
-        &__medium-half + &__medium-half {
+        If there is a div with a class name of &__large-half after another div with 
+        a class name of &__large-half -> then give it a margin left. */
+        &__large-half + &__large-half {
             margin-left: 6.25rem;
         }
     }

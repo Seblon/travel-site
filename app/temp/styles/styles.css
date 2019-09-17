@@ -716,10 +716,10 @@ a {
 @media (min-width: 800px) {
 
 .row {
-        -webkit-box-orient: vertical;
+        -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+            -ms-flex-direction: row;
+                flex-direction: row;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between
@@ -746,6 +746,9 @@ a {
         }
 
         .row__medium-one-third--larger {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
             -ms-flex-preferred-size: 37%;
                 flex-basis: 37%
         }
@@ -756,6 +759,9 @@ a {
         }
 
         .row__medium-two-thirds--smaller {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
             -ms-flex-preferred-size: 63%;
                 flex-basis: 63%;
         }
@@ -781,8 +787,8 @@ a {
                 justify-content: space-between
 
         /* Oh god I'm so proud of myself right now. This code down below, says:
-        If there is a div with a class name of &__medium-half after another div with 
-        a class name of &__medium-half -> then give it a margin left. */
+        If there is a div with a class name of &__large-half after another div with 
+        a class name of &__large-half -> then give it a margin left. */
 }
 
         .row__b-margin-until-large {
@@ -820,7 +826,7 @@ a {
             -ms-flex-preferred-size: 50%;
                 flex-basis: 50%;
         }
-        .row__medium-half + .row__medium-half {
+        .row__large-half + .row__large-half {
             margin-left: 6.25rem;
         }
     }
@@ -836,6 +842,12 @@ a {
 .generic-content-container p {
          font-size: 1.125rem
    }
+    }
+
+@media (min-width: 800px) {
+      .generic-content-container--l-padding-small {
+      padding-left: 2rem;
+      }
     }
 
 .generic-content-container p a {
@@ -969,86 +981,81 @@ a {
       margin: .25rem 0 1rem
    }
 
+/* Do not edit modules/_sprite directly as it is generated automatically by Gulp.
+Instead edit gulp/templates/sprite */
+
+.icon {
+         background-image: url('/assets/images/sprites/sprite-69f19c2e.svg');
+      }
+
 .icon--clear-view-escapes {
-      width: 142.4;
-      height: 59.53;
-      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      width: 142.4px;
+      height: 59.53px;
       background-position: 0 0;
    }
 
 .icon--comment {
-      width: 64;
-      height: 64;
-      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      width: 64px;
+      height: 64px;
       background-position: 99.70443349753694% 0;
    }
 
 .icon--facebook {
-      width: 21.23;
-      height: 42.01;
-      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      width: 21.23px;
+      height: 42.01px;
       background-position: 26.040607071652357% 45.795830448496034%;
    }
 
 .icon--fire {
-      width: 56;
-      height: 64;
-      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      width: 56px;
+      height: 64px;
       background-position: 0 99.56481481481481%;
    }
 
 .icon--globe {
-      width: 64;
-      height: 64;
-      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      width: 64px;
+      height: 64px;
       background-position: 27.586206896551722% 99.56481481481481%;
    }
 
 .icon--instagram {
-      width: 42.01;
-      height: 42.01;
-      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      width: 42.01px;
+      height: 42.01px;
       background-position: 63.2917018534157% 49.234556504346486%;
    }
 
 .icon--mail {
-      width: 64;
-      height: 48;
-      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      width: 64px;
+      height: 48px;
       background-position: 0 48.00806451612903%;
    }
 
 .icon--rain {
-      width: 64;
-      height: 64;
-      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      width: 64px;
+      height: 64px;
       background-position: 99.70443349753694% 59.25925925925926%;
    }
 
 .icon--star {
-      width: 64;
-      height: 64;
-      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      width: 64px;
+      height: 64px;
       background-position: 59.11330049261084% 99.56481481481481%;
    }
 
 .icon--twitter {
-      width: 51.78;
-      height: 42.06;
-      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      width: 51.78px;
+      height: 42.06px;
       background-position: 94.04330452560171% 98.50700323226104%;
    }
 
 .icon--wifi {
-      width: 60;
-      height: 64;
-      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      width: 60px;
+      height: 64px;
       background-position: 68.79227053140097% 0;
    }
 
 .icon--youtube {
-      width: 34.75;
-      height: 42;
-      background-image: url('/temp/sprite/css/svg/sprite.css-69f19c2e.svg');
+      width: 34.75px;
+      height: 42px;
       background-position: 36.69752421959096% 45.792307692307695%;
    }
