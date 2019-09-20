@@ -1,7 +1,0 @@
-.grid {
-   max-width: 1236px;
-   display: grid;
-   grid-template-columns:  215px 3fr 1fr;
-   align-items: center;
-   margin: 0 auto;
-}

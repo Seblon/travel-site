@@ -1,32 +1,28 @@
 .primary-nav {
-   
-   @mixin atMedium {
+  display: flex;
+  justify-content: end;
 
-      grid-column: 2 / 3;
-      justify-content: end;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
 
-         ul {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-         }
+  li {
+    list-style: none;
+    padding-right: 20px;
+  }
 
-         li {
-            list-style: none;
-            padding-right: 20px;
-         }
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
 
-         a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 300;
-
-            &:hover,
-            &:focus {
-               color: $mainOrange;
-            }
-         }
-   }
+    &:hover,
+    &:focus {
+      color: $mainOrange;
+    }
+  }
 }
