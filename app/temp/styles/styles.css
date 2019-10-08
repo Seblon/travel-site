@@ -474,66 +474,75 @@ a {
 }
 
 .large-hero {
-    position: relative;
-    border-bottom: 10px solid #2f5572;
+  position: relative;
+  border-bottom: 10px solid #2f5572;
 }
 
 .large-hero__image {
-        display: block;
-    }
+    display: block;
+  }
 
 .large-hero__text-content {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding-top: 88px;
+  }
+
+@media (min-width: 800px) {
+
+.large-hero__text-content {
+      padding-top: 60px
+  }
     }
 
 .large-hero__title {
-        font-weight: 300;
-        font-size: 2.4rem;
-        margin: 0;
-        color: #2f5572;
-    }
+    font-weight: 300;
+    font-size: 2.4rem;
+    margin: 0;
+    color: #2f5572;
+  }
 
 @media (min-width: 530px) {
 
 .large-hero__title {
-            font-size: 4.8rem
-    }
+      font-size: 4.8rem
+  }
     }
 
 .large-hero__subtitle {
-        font-weight: 300;
-        font-size: 1.5rem;
-        margin: 0;
-        color:#2f5572;
-    }
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: 0;
+    color: #2f5572;
+  }
 
 @media (min-width: 530px) {
 
 .large-hero__subtitle {
-            font-size: 2.9rem
-    }
+      font-size: 2.9rem
+  }
     }
 
 .large-hero__description {
-        color: #fff;
-        font-size: 1.1rem;
-        font-weight: 100;
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
-        margin-left: auto;
-        margin-right: auto;
-    }
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30rem;
+  }
 
 @media (min-width: 530px) {
 
 .large-hero__description {
-            font-size: 1.875rem
-    }
+      font-size: 1.875rem
+  }
     }
 
 .btn {
@@ -1085,19 +1094,71 @@ Instead edit gulp/templates/sprite */
 /* In order to fully utilize grid objects, most elements have been moved to _grid.css instead. */
 
 .site-header {
-  padding: 10px 0;
   position: absolute;
   width: 100%;
   z-index: 2;
-  background-color: rgba(47,85,114, 0.3);
+  padding: 10px 0;
 }
+
+@media (min-width: 800px) {
+
+.site-header {
+    background-color: rgba(47,85,114, 0.35)
+}
+    }
 
 .site-header__logo {
     position: absolute;
     top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%) scale(0.8);
+            transform: translateX(-50%) scale(0.8);
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
     background-color: #2f5572;
-    padding: 26px 36px;
+    padding: 25px 36px;
   }
+
+@media (min-width: 800px) {
+
+.site-header__logo {
+      left: auto;
+      -webkit-transform: translateX(0);
+              transform: translateX(0)
+  }
+    }
+
+.site-header__logo__graphic {
+    /* Hides the text by sending it out to the far left */
+    text-indent: -9999px;
+  }
+
+.site-header__menu-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+  }
+
+@media (min-width: 800px) {
+
+.site-header__menu-icon {
+      display: none
+  }
+    }
+
+.site-header__menu-content {
+    display: none;
+  }
+
+@media (min-width: 800px) {
+
+.site-header__menu-content {
+      display: block
+  }
+    }
 
 .primary-nav {
   display: -webkit-box;
@@ -1137,3 +1198,6 @@ Instead edit gulp/templates/sprite */
     .primary-nav a:focus {
       color: #d59541;
     }
+
+.primary-nav__btn-container {
+  }
