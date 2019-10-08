@@ -1160,6 +1160,10 @@ Instead edit gulp/templates/sprite */
   }
     }
 
+.site-header__menu-content--is-visible {
+      display: block;
+    }
+
 .primary-nav {
   display: -webkit-box;
   display: -ms-flexbox;
