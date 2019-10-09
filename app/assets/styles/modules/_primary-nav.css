@@ -1,24 +1,50 @@
 .primary-nav {
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  justify-content: center;
+
+  @mixin atMedium {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 
   ul {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     margin: 0;
     padding: 0;
+
+    @mixin atMedium {
+      justify-content: flex-end;
+      align-items: center;
+    }
   }
 
   li {
     list-style: none;
-    padding-right: 20px;
+    margin: 5px;
+    padding: 8px;
+    font-size: 0.8rem;
+    background-color: #fff;
+
+    @mixin atMedium {
+      justify-content: flex-end;
+      padding-right: 20px;
+      background-color: transparent;
+      font-size: 1rem;
+    }
   }
 
   a {
-    color: #fff;
+    color: $mainBlue;
     text-decoration: none;
     font-weight: 300;
+
+    @mixin atMedium {
+      color: #fff;
+    }
 
     &:hover,
     &:focus {
@@ -27,5 +53,19 @@
   }
 
   &__btn-container {
+    width: 200px;
+    order: -1;
+    text-align: center;
+    margin: 0 auto 10px auto;
+
+    & a {
+      color: #fff;
+    }
+
+    @mixin atMedium {
+      display: flex;
+      order: 0;
+      margin: 0;
+    }
   }
 }
